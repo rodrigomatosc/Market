@@ -16,6 +16,7 @@ export default function TabBarIcon({name, focused}) {
         name={icons[name]}
         size={focused ? 24 : 24}
         color={focused ? '#F1F1F1' : '#5E9761'}
+        style={styles.icon}
       />
     </View>
   );
@@ -23,20 +24,24 @@ export default function TabBarIcon({name, focused}) {
 
 const styles = StyleSheet.create({
   container: {
+    alignContent: 'center',
+    justifyContent: 'center',
     position: 'absolute',
     borderRadius: 50,
-    padding: 10,
-    elevation: 10,
+    // padding: 10,
   },
 
   containerFocused: {
     position: 'absolute',
+    alignContent: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: '#5E9761',
     borderRadius: 50,
-    padding: 10,
-    elevation: 10,
     top: -15,
     borderColor: '#ffff',
     borderWidth: 5,
+    width: 60,
+    height: 60,
   },
 });
